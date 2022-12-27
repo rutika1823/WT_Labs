@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registration form</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <style>
+    body{
+        font-family: 'Courier New', Courier, monospace;
+        background-color: pink;
+        padding-left: 20%;
+        padding-right: 20%;
+
+    }  
+
+    .container{
+        padding: 50px;
+        background-color: lightblue;
+    }
+    input[type=text],input[type=password],textarea{
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+    }
+    input[type=text]:input[type=password]:focus{
+        background-color: orange;
+        outline: none;
+    }
+        div{
+            padding: 10px 0;
+        }
+        hr{
+            border: 1px solid #f1f1f1;
+            margin-bottom: 25px;
+        }
+        .registerbtn{
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100px;
+            opacity: 0.9;
+            
+
+    }
+    </style>
+    <body>
+        <form>
+            <div class="container">
+                <center><h1>VIT Addmission form</h1></center>
+                <hr>
+                <label>First name: </label>
+                <input type="text" name="name" placeholder="Firstname"><br><br>
+                <label>last name: </label>
+                <input type="text" name="lst" placeholder="lastname"><br><br>
+                <div>
+                    <label>Course </label>
+                    <select>
+                        <option value="CS">CS</option>
+                        <option value="IT">IT</option>
+                        <option value="ENTC">ENTC</option>
+                        <option value="Chemical">Chemical</option>
+                    </select>
+                </div>
+
+               <div>
+                <label>Gender</label><br>
+                <input type="radio" value="male" name="male">Male<br>
+                <input type="radio" value="female" name="female">FeMale<br>
+                <input type="radio" value="other" name="other">Other<br>
+               </div>
+               
+
+                <label>Phone no: </label>
+                <input type="text" name="phno"><br><br>
+
+                <label>Address</label>
+                <textarea cols="80" rows="5" value="address"> </textarea>
+                <!-- <input type="text" name="add" ><br><br> -->
+                <br><br>
+                <label>Email</label>
+                <input type="text" placeholder="Enter Email" name="email"><br><br>
+                <label>Password</label>
+                <input type="Password" placeholder="Enter Password" name="pass"><br><br>
+                <label>Re-Password</label>
+                <input type="Password"  placeholder="Retype- Password" name="passw"><br><br>
+                <button type="submit" class="registerbtn">Register<br><br>
+            </div>
+
+        </form>
+
+    </body>
+</html>

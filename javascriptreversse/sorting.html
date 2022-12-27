@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting element</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: rgb(236, 211, 175);
+            font-family: 'Courier New', Courier, monospace;
+            padding-left:20%;
+            padding-right: 20%;
+            
+        }
+        .container{
+            background-color: rgb(232, 142, 212);          
+            border-radius:  2%;
+            border-color: black;
+            border-width: 3%;
+            border: 2;
+            margin-left: 10px;
+        }
+        .insi{
+            padding-left: 10%;
+        }
+    </style>
+    <body>
+        <form class="container">
+            <div class="insi">
+                <h1>Program for sorting elements of array in javascript</h1>
+                <hr>
+                <div>
+                    <!-- <form class="container"> -->
+                    <input type="number" id="num" placeholder="Enter a numbers">
+                    <button type="button" onclick="add_element('num');">Next</button>
+                    <!-- </form> -->
+                    <br><br>
+                    <input type="text" id="str" placeholder="Enter a string">
+                    <button type="button" onclick="add_element('str');">Next</button>
+                    <br><br>
+                    <label id="array">Array:</label><br><br>
+                    <label id="result">Result:</label>
+                    <br><br>
+                    <button type="button" onclick="sort();">Sort</button>
+                </div>
+            </div>
+        </form>
+
+        <script>
+    const arr=[]
+    var i=0;
+    function add_element(element_type){
+        if(element_type=="num"){
+            arr[i]=parseInt(document.getElementById("num").value)
+        }
+        else{
+            arr[i]=document.getElementById("str").value
+        }
+        document.getElementById("array").innerHTML="Array:"+arr
+        i++
+    }
+
+    function sort(){
+        for(let j=0; j<arr.length; j++){
+            for(let k=j+1; k< arr.length; k++){
+                if(arr[j]>arr[k]){
+                    temp=arr[j];
+                    arr[j]=arr[k];
+                    arr[k]=temp;
+                }
+            }
+        }
+        document.getElementById("result").innerHTML="Result:"+arr
+    }
+</script>
+    </body>
+</html>
+</body>
+</html>

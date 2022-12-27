@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>IT website</title>
+    </head>
+    <style>
+ 
+    #myVideo{
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        max-width: 100%;
+        max-height: 100%;
+       
+    }
+    .content{
+        position: fixed;
+        background: black;
+        color: white;
+        bottom: 0;
+        width: 100%;
+        opacity: 60%;
+        padding-left: 20%;
+    
+    }
+    #mybtn{
+        width:200px;
+        font-size: 18px;
+        padding: 10px;
+        border: none;
+        background-color: rgb(8, 8, 8);
+        color: #fff;
+        cursor: pointer;
+    }
+</style>
+    <body>
+        <video autoplay muted loop id="myVideo">
+            <source src="video.mp4" type="video/mp4">
+        </video>
+        <div class="content">
+            <h1> This is Ocean Waves</h1>
+            <p>Beauty of the such beautiful nature</p>
+            <button id="mybtn" onclick="myFunction()">Pause</button>
+        </div>
+        <script>
+        var video = document.getElementById("myVideo");
+        var btn = document.getElementById("mybtn");
+
+        function myFunction(){
+            if(video.paused){
+                video.play();
+                btn.innerHTML = "Pause";
+            }else{
+                video.pause();
+                btn.innerHTML="Play";
+            }
+        }
+    </script>
+    </body>
+</html>
